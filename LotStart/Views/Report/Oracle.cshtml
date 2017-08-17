@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+    @* Author rherejias 4/17/2017 *@
+
+    @* Grid Panel *@
+    <div id="test" class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading" style="font-size:medium;">
+                    Move Order List
+                    <div class="panel-control">
+                        <a id="searchPanel" class="btn btn-medium btn-primary btn-custom" style="float:right; top:-8px; position:relative; color:white; font-size:medium;"><i class="icon-magnifier" aria-hidden="true"></i>&nbsp; Filters</a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="jqxgrid" style="margin-top: 15px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section JavaScript {
+    <script src="~/Scripts/pages/MoveOrder.js"></script>
+}
+
+

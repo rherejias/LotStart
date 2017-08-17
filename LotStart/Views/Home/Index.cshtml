@@ -1,0 +1,130 @@
+﻿@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+
+@section content {
+    <body>
+        <canvas id="chart4" height="50"></canvas>
+    </body>
+
+    <div class="row">
+        <div class="col-lg-4 col-md-4">
+            <div class="panel info-box panel-white">
+                <div class="panel-body">
+                    <div class="info-box-stats">
+                        <p class="counter">107,200</p>
+                        <span class="info-box-title">Approve</span>
+                    </div>
+                    <div class="info-box-icon">
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </div>
+                    <div class="info-box-progress">
+                        <div class="progress progress-xs progress-squared bs-n">
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="panel info-box panel-white">
+                <div class="panel-body">
+                    <div class="info-box-stats">
+                        <p class="counter">340,230</p>
+                        <span class="info-box-title">Incomplete</span>
+                    </div>
+                    <div class="info-box-icon">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </div>
+                    <div class="info-box-progress">
+                        <div class="progress progress-xs progress-squared bs-n">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+            <div class="panel info-box panel-white">
+                <div class="panel-body">
+                    <div class="info-box-stats">
+                        <p class="counter">653,000</p>
+                        <span class="info-box-title">Closed</span>
+                    </div>
+                    <div class="info-box-icon">
+                        <i class="glyphicon glyphicon-folder-close"></i>
+                    </div>
+                    <div class="info-box-progress">
+                        <div class="progress progress-xs progress-squared bs-n">
+                            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+@*Email Notification Template*@
+
+@*<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        .center {
+            margin: auto;
+            width: 80%;
+        }
+
+        .panel-header {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .panel-body {
+        }
+
+        .panel-footer {
+            border-radius: 0 0 10px 10px;
+            border-top: solid 1px #dbd9d9;
+        }
+
+        .tab {
+            padding-left: 1em;
+            font-family: arial;
+        }
+    </style>
+</head>
+<body style="background-color:#dbd9d9">
+
+    <br/>
+    <div class="box center panel-header" style="height:150px; background-color:#188ea0">
+
+        <h2 class="tab" style="padding-top: 3%;color:#fcf9f9">(Logo) AMPI</h2>
+        <h1 class="tab" style="color:#fcf9f9; font-size:40px">Lot Start Automation</h1>
+    </div>
+    <div class="box center panel-body" style="height:300px; background-color:white"></div>
+    <div class="box center panel-footer" style="height:50px; background-color:white">
+        <p class="tab">This is a system-generated email, Please do not reply. Thank you!</p>
+    </div>
+
+</body>
+</html>*@
+
+
+
+
+@*End*@
+
+@section JavaScript
+{
+       <script src="~/Scripts/template/plugins/chartsjs/Chart.min.js"></script>
+    <script src="~/Scripts/template/js/pages/charts-chartjs.js"></script>
+    @*<script src="~/Scripts/pages/home.js"></script>*@
+}

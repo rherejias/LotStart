@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = ViewBag.Title;
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+
+
+    @* search filters, to retain filter upon clicking ok on validate *@
+<input id="moveOrderFilter" type="hidden" value="@ViewBag.moveOrderFilter" />
+<input id="itemFilter" type="hidden" value="@ViewBag.itemFilter"/>
+<input id="plannerFilter" type="hidden" value="@ViewBag.plannerFilter"/>
+<input id="packageFilter" type="hidden" value="@ViewBag.packageFilter"/>
+<input id="createdFromFilter" type="hidden" value="@ViewBag.createdFromFilter"/>
+<input id="createdToFilter" type="hidden" value="@ViewBag.createdToFilter"/>
+<input id="requiredFromFilter" type="hidden" value="@ViewBag.requiredFromFilter"/>
+<input id="requiredToFilter" type="hidden" value="@ViewBag.requiredToFilter"/>
+    @* end of search filters  *@
+
+
+<input id="hidden" type="hidden" value="@ViewBag.hiddenFrom" />
+    <div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    Details
+                    <div class="panel-control">
+                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Expand/Collapse" class="panel-collapse"><i class="icon-arrow-up" id="iconExpand_Details"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row" style="margin-top: 28px;">
+                        @* Details Panel *@
+                        <div class="col-sm-12">
+                           
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Move-Order</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="moveOrder" style="font-weight:bold">@ViewBag.moveOrder</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Item</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblItem" style="font-weight:bold">@ViewBag.Item</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Org</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblOrg" style="font-weight:bold">@ViewBag.Org</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Target CAS</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblTargetCAS" style="font-weight:bold">@ViewBag.TargetCAS</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Quantity</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblQuantity" style="font-weight:bold">@ViewBag.Quantity</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Sub-Inventory</label><a style="float:right">:</a>
+                                    </div>
+                                    
+                                    <div class="col-sm-7">
+                                        <label id="lblsuvinventory" style="font-weight:bold">@ViewBag.subInventory</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Package</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblPackage" style="font-weight:bold">@ViewBag.package</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Planner</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblplanner" style="font-weight:bold">@ViewBag.planner</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Date Created</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lbldatecreated" style="font-weight:bold">@ViewBag.dateCreated</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Date Required</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lbldaterequired" style="font-weight:bold">@ViewBag.dateRequired</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <label>Status</label><a style="float:right">:</a>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <label id="lblStatus" style="font-weight:bold">@ViewBag.status</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    @* grid panel *@
+                    <h3 class="panel-title">Validation List</h3>              
+                    <div class="panel-control">
+                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Expand/Collapse" class="panel-collapse"><i class="icon-arrow-up" id="iconExpand_Validlist"></i></a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form>
+                        <input type="text" name="txt1" id="txtLotnumber" class="form-control" placeholder="Lot Number" style="margin-top:20px; width:230px;" />
+                    </form>
+                        @*<div class="input-group m-b-sm" >
+                           
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" id="btnGo">Go</button>
+                            </span>
+                        </div>*@
+                   
+                    <div id="jqxgrid" style="margin-top: 15px;">
+                    </div>
+                    <label>Progress:</label>
+                    <label id="lblfinishedCtr">0</label>
+                    <label>of</label>
+                    <label id="lbltotalCtr"></label>
+                    <label id="lblprogconfirm"></label>
+                    <br />
+                    <div class="progress">
+                        <div class="progress-bar active progress-bar-success" id="progbarvalidation" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">45% Complete</span>
+                        </div>
+                    </div>
+                    <div class="row" style="text-align:right; margin-right:1px;">
+                        <button class="btn btn-success" id="cmdValidationSubmit" disabled>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+@section JavaScript {
+<script src="~/Scripts/pages/Validate.js"></script>
+}
+
+

@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+    @* panel for validate *@
+    <div class="row">
+        <div class="col-md-2">
+            <div class="panel panel-info">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title">Add User</h4>
+                </div>
+                <div class="panel-body">
+                    <br />
+                    <form>
+                        <div class="form-group">
+                            <label for="txtUsername">Username</label>
+                            <input type="email" class="form-control" id="txtUsername" placeholder="jdelacruz">
+                        </div>
+                        <button type="button" class="btn btn-info" id="cmdValidate">Validate to AD Server</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @* panel for grid *@
+        <div class="col-md-5">
+            <div class="panel panel-primary">
+                <div class="panel-heading clearfix">
+                    <h3 class="panel-title">Manage access rights for</h3>
+                </div>
+                <div class="panel-body">
+                    <br />
+                       <div class="jqxgrid jqxgrid-filterable jqxgrid-sortable jqxgrid-columnsresize jqxgrid-enableellipsis jqxgrid-pageable" grid-selection-mode="singlerow" id="gridUsers" data-url="/users/GetRegisteredUsers" data-tree-url="/modules/getmodules"></div>
+                </div>
+            </div>
+        </div>
+
+        @* panel for tree view *@
+        <div class="col-md-5">
+            <div class="panel panel-success">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title">Available Modules</h4>
+                </div>
+                <div class="panel-body tree-container">
+                    <div id="treeModules" data-url="/modules/getmodules" data-wtf="hello world"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section JavaScript {
+    <script src="~/Scripts/pages/admin/accessRights.js"></script>
+}

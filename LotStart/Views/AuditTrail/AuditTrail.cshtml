@@ -1,0 +1,35 @@
+﻿@{
+     Layout = "~/Views/Shared/template/_Layout.cshtml";
+}
+@section content {
+@* Author rherejias 4/17/2017 *@
+
+@* Grid Panel *@
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading" style="font-size:medium;">
+                    Audit Trail
+                    </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12" id="mainGridContainer">
+                            <br />
+
+                            @* @version: 1.0, author: rherejias, description: data grid of audit trail, list of transactions *@
+                            <div id="AuditTrailGrid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section JavaScript {
+<script src="~/Scripts/pages/AuditTrail.js"></script>
+}
+
+
